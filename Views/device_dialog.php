@@ -126,6 +126,7 @@
     <div class="modal-footer">
         <button id="device-init-ok" class="btn post-init hide" data-dismiss="modal" aria-hidden="true"><?php echo _('Ok'); ?></button>
         <button id="device-init-cancel" class="btn pre-init" data-dismiss="modal" aria-hidden="true"><?php echo _('Cancel'); ?></button>
+        <button id="device-init-dryrun" class="btn pre-init"><?php echo _('Dry Run'); ?></button>
         <button id="device-init-confirm" class="btn btn-primary pre-init"><?php echo _('Initialize'); ?></button>
     </div>
 </div>

@@ -475,9 +475,10 @@ class Device
         return $template;
     }
 
-    public function init_template($id)
+    public function init_template($id, $dry_run)
     {
         $id = (int) $id;
+        $dry_run = (int) $dry_run;
         
         $device = $this->get($id);
         if (isset($device['type']) && $device['type'] != 'null' && $device['type']) {
@@ -486,7 +487,7 @@ class Device
                 $module = $template['module'];
                 $class = $this->get_module_class($module);
                 if ($class != null) {
-                    return $class->init_template($device['userid'], $device['nodeid'], $device['name'], $device['type']);
+                    return $class->init_template($device['userid'], $device['nodeid'], $device['name'], $device['type'], $dry_run);
                 }
             }
             else {

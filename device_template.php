@@ -39,6 +39,8 @@ class DeviceTemplate
             }
         }
         
+        asort($list);
+        
         return $list;
     }
 
@@ -48,9 +50,10 @@ class DeviceTemplate
         return $list[$type];
     }
 
-    public function init_template($userid, $nodeid, $name, $type) {
+    public function init_template($userid, $nodeid, $name, $type, $dry_run) {
 
         $userid = (int) $userid;
+        $dry_run = (int) $dry_run;
 
         $list = $this->load_template_list();
         if (!isset($list[$type])) return array('success'=>false, 'message'=>"Template file not found '".$type."'");
@@ -62,22 +65,22 @@ class DeviceTemplate
         $log = "";
         
         // Create feeds
-        $log .= $this->create_feeds($userid, $nodeid, $feeds);
+        $log .= $this->create_feeds($userid, $nodeid, $feeds, $dry_run);
         
         // Create inputs
-        $log .= $this->create_inputs($userid, $nodeid, $inputs);
+        $log .= $this->create_inputs($userid, $nodeid, $inputs, $dry_run);
         
         // Create inputs processes
-        $log .= $this->create_input_processes($userid, $feeds, $inputs, $nodeid);
+        $log .= $this->create_input_processes($userid, $feeds, $inputs, $nodeid, $dry_run);
         
         // Create feeds processes
-        $log .= $this->create_feed_processes($userid, $feeds, $inputs);
+        $log .= $this->create_feed_processes($userid, $feeds, $inputs, $dry_run);
         
         return array('success'=>true, 'message'=>'Device initialized', 'log'=>$log);
     }
 
     // Create the feeds
-    protected function create_feeds($userid, $nodeid, &$feeds) {
+    protected function create_feeds($userid, $nodeid, &$feeds, $dry_run) {
         global $feed_settings;
         
         $log = "feeds:\n";
@@ -103,12 +106,16 @@ class DeviceTemplate
             $feedid = $feed->exists_tag_name($userid, $tag, $name);
             
             if ($feedid == false) {
-                $this->log->info("create_feeds() userid=$userid tag=$tag name=$name datatype=$datatype engine=$engine");
-                $result = $feed->create($userid, $tag, $name, $datatype, $engine, $options);
-                if($result["success"] !== true) {
-                    $log .= "-- ERROR $tag:$name\n";
+                if (!$dry_run) {
+                    $this->log->info("create_feeds() userid=$userid tag=$tag name=$name datatype=$datatype engine=$engine");
+                    $result = $feed->create($userid, $tag, $name, $datatype, $engine, $options);
+                    if($result["success"] !== true) {
+                        $log .= "-- ERROR $tag:$name\n";
+                    } else {
+                        $feedid = $result["feedid"]; // Assign the created feed id to the feeds array
+                        $log .= "-- CREATE $tag:$name\n";
+                    }
                 } else {
-                    $feedid = $result["feedid"]; // Assign the created feed id to the feeds array
                     $log .= "-- CREATE $tag:$name\n";
                 }
             } else {
@@ -121,7 +128,7 @@ class DeviceTemplate
     }
 
     // Create the inputs
-    protected function create_inputs($userid, $nodeid, &$inputs) {
+    protected function create_inputs($userid, $nodeid, &$inputs, $dry_run) {
         require_once "Modules/input/input_model.php";
         $input = new Input($this->mysqli, $this->redis, null);
         
@@ -140,14 +147,18 @@ class DeviceTemplate
             $inputid = $input->exists_nodeid_name($userid, $node, $name);
             
             if ($inputid == false) {
-                $this->log->info("create_inputs() userid=$userid nodeid=$node name=$name description=$description");
-                $inputid = $input->create_input($userid, $node, $name);
-                if(!$input->exists($inputid)) {
-                    $log .= "-- ERROR $node:$name\n";
+                if (!$dry_run) {
+                    $this->log->info("create_inputs() userid=$userid nodeid=$node name=$name description=$description");
+                    $inputid = $input->create_input($userid, $node, $name);
+                    if(!$input->exists($inputid)) {
+                        $log .= "-- ERROR $node:$name\n";
+                    } else {
+                        $log .= "-- CREATE $node:$name\n";
+                    }
+                    $input->set_fields($inputid, '{"description":"'.$description.'"}');
                 } else {
                     $log .= "-- CREATE $node:$name\n";
                 }
-                $input->set_fields($inputid, '{"description":"'.$description.'"}');
             } else {
                 $log .= "-- EXISTS $node:$name\n";
             }
@@ -157,7 +168,7 @@ class DeviceTemplate
     }
 
     // Create the inputs process lists
-    protected function create_input_processes($userid, $feeds, $inputs, $nodeid) {
+    protected function create_input_processes($userid, $feeds, $inputs, $nodeid, $dryrun) {
         global $user, $feed_settings;
         
         require_once "Modules/feed/feed_model.php";
@@ -184,8 +195,10 @@ class DeviceTemplate
 
                 $processes = implode(",", $result);
                 if ($processes != "") {
-                    $this->log->info("create_inputs_processes() calling input->set_processlist inputid=$inputid processes=$processes");
-                    $input->set_processlist($userid, $inputid, $processes, $process_list);
+                    if (!$dryrun) {
+                        $this->log->info("create_inputs_processes() calling input->set_processlist inputid=$inputid processes=$processes");
+                        $input->set_processlist($userid, $inputid, $processes, $process_list);
+                    }
                     $log .= "-- SET ".$nodeid.":".$i->name."\n";
                     $log .= $this->log_processlist($processes,$input,$feed,$process_list);
                 }
@@ -195,7 +208,7 @@ class DeviceTemplate
         return $log."\n";
     }
 
-    protected function create_feed_processes($userid, $feeds, $inputs) {
+    protected function create_feed_processes($userid, $feeds, $inputs, $dryrun) {
         global $user, $feed_settings;
         
         require_once "Modules/feed/feed_model.php";
@@ -222,8 +235,10 @@ class DeviceTemplate
 
                 $processes = implode(",", $result);
                 if ($processes != "") {
-                    $this->log->info("create_feeds_processes() calling feed->set_processlist feedId=$feedid processes=$processes");
-                    $feed->set_processlist($userid, $feedid, $processes, $process_list);
+                    if (!$dryrun) {
+                        $this->log->info("create_feeds_processes() calling feed->set_processlist feedId=$feedid processes=$processes");
+                        $feed->set_processlist($userid, $feedid, $processes, $process_list);
+                    }
                     $log .= "-- SET feedid=$feedid\n";
                     $log .= $this->log_processlist($processes,$input,$feed,$process_list);
                 }

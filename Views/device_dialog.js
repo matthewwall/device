@@ -319,11 +319,17 @@ var device_dialog =
             $(".pre-init").show(); $(".post-init").hide();  
             
             $("#device-init-confirm").off('click').on('click', function() {
-                var result = device.initTemplate(device_dialog.device.id);
+                var result = device.initTemplate(device_dialog.device.id,0);
                 device_dialog.showInitLog(result);
             });
+            
+            $("#device-init-dryrun").off('click').on('click', function() {
+                var result = device.initTemplate(device_dialog.device.id,1);
+                device_dialog.showInitLog(result);
+            });
+            
         } else {
-            var result = device.initTemplate(device_dialog.device.id);
+            var result = device.initTemplate(device_dialog.device.id,0);
             device_dialog.showInitLog(result);
         }
     },

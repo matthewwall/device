@@ -110,7 +110,7 @@ function device_controller()
                         if (isset($_GET['type'])) {
                             $device->set_fields($deviceid, json_encode(array("type"=>$_GET['type'])));
                         }
-                        $result = $device->init_template($deviceid);
+                        $result = $device->init_template($deviceid,get('dryrun'));
                     }
                 }
             }
