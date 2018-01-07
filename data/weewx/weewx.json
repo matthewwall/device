@@ -1,0 +1,282 @@
+{
+	"name": "weewx",
+	"category": "weeWX",
+	"group": "Weather",
+	"description": "INPUTS & FEEDS for weeWX default schema",
+	"inputs": [
+	{
+		"name": "barometer",
+		"description": "Barometer",
+		"processList": [{
+			"process": "log_to_feed",
+			"arguments": {
+				"type": "ProcessArg::FEEDID",
+				"value": "barometer"
+			}
+		}]
+	},
+	{
+		"name": "pressure",
+		"description": "Pressure",
+		"processList": [{
+			"process": "log_to_feed",
+			"arguments": {
+				"type": "ProcessArg::FEEDID",
+				"value": "pressure"
+			}
+		}]
+	},
+	{
+		"name": "altimeter",
+		"description": "Altimeter",
+		"processList": [{
+			"process": "log_to_feed",
+			"arguments": {
+				"type": "ProcessArg::FEEDID",
+				"value": "altimeter"
+			}
+		}]
+	},
+	{
+		"name": "inTemp",
+		"description": "Inside Temperature",
+		"processList": [{
+			"process": "log_to_feed",
+			"arguments": {
+				"type": "ProcessArg::FEEDID",
+				"value": "inTemp"
+			}
+		}]
+	},
+	{
+		"name": "outTemp",
+		"description": "Outside Temperature",
+		"processList": [{
+			"process": "log_to_feed",
+			"arguments": {
+				"type": "ProcessArg::FEEDID",
+				"value": "outTemp"
+			}
+		}]
+	},
+	{
+		"name": "inHumidity",
+		"description": "Inside Humidity",
+		"processList": [{
+			"process": "log_to_feed",
+			"arguments": {
+				"type": "ProcessArg::FEEDID",
+				"value": "inHumidity"
+			}
+		}]
+	},
+	{
+		"name": "outHumidity",
+		"description": "Outside Humidity",
+		"processList": [{
+			"process": "log_to_feed",
+			"arguments": {
+				"type": "ProcessArg::FEEDID",
+				"value": "outHumidity"
+			}
+		}]
+	},
+	{
+		"name": "windSpeed",
+		"description": "Wind Speed",
+		"processList": [{
+			"process": "log_to_feed",
+			"arguments": {
+				"type": "ProcessArg::FEEDID",
+				"value": "windSpeed"
+			}
+		}]
+	},
+	{
+		"name": "windDir",
+		"description": "Wind Direction",
+		"processList": [{
+			"process": "log_to_feed",
+			"arguments": {
+				"type": "ProcessArg::FEEDID",
+				"value": "windDir"
+			}
+		}]
+	},
+	{
+		"name": "windGust",
+		"description": "Wind Gust",
+		"processList": [{
+			"process": "log_to_feed",
+			"arguments": {
+				"type": "ProcessArg::FEEDID",
+				"value": "windGust"
+			}
+		}]
+	},
+	{
+		"name": "windGustDir",
+		"description": "Wind Gust Direction",
+		"processList": [{
+			"process": "log_to_feed",
+			"arguments": {
+				"type": "ProcessArg::FEEDID",
+				"value": "windGustDir"
+			}
+		}]
+	},
+	{
+		"name": "rainRate",
+		"description": "Rain Rate",
+		"processList": [{
+			"process": "log_to_feed",
+			"arguments": {
+				"type": "ProcessArg::FEEDID",
+				"value": "rainRate"
+			}
+		}]
+	},
+	{
+		"name": "rain",
+		"description": "Rain",
+		"processList": [{
+			"process": "log_to_feed",
+			"arguments": {
+				"type": "ProcessArg::FEEDID",
+				"value": "rain"
+			}
+		}]
+	},
+	{
+		"name": "dewpoint",
+		"description": "Dewpoint",
+		"processList": [{
+			"process": "log_to_feed",
+			"arguments": {
+				"type": "ProcessArg::FEEDID",
+				"value": "dewpoint"
+			}
+		}]
+	},
+	{
+		"name": "windchill",
+		"description": "Wind Chill",
+		"processList": [{
+			"process": "log_to_feed",
+			"arguments": {
+				"type": "ProcessArg::FEEDID",
+				"value": "windchill"
+			}
+		}]
+	},
+	{
+		"name": "heatindex",
+		"description": "Heat Index",
+		"processList": [{
+			"process": "log_to_feed",
+			"arguments": {
+				"type": "ProcessArg::FEEDID",
+				"value": "heatindex"
+			}
+		}]
+	}
+        ],
+	"feeds": [
+	{
+		"name": "barometer",
+		"type": "DataType::REALTIME",
+		"engine": "Engine::PHPFINA",
+		"interval": "10"
+	},
+	{
+		"name": "pressure",
+		"type": "DataType::REALTIME",
+		"engine": "Engine::PHPFINA",
+		"interval": "10"
+	},
+	{
+		"name": "altimeter",
+		"type": "DataType::REALTIME",
+		"engine": "Engine::PHPFINA",
+		"interval": "10"
+	},
+	{
+		"name": "inTemp",
+		"type": "DataType::REALTIME",
+		"engine": "Engine::PHPFINA",
+		"interval": "10"
+	},
+	{
+		"name": "outTemp",
+		"type": "DataType::REALTIME",
+		"engine": "Engine::PHPFINA",
+		"interval": "10"
+	},
+	{
+		"name": "inHumidity",
+		"type": "DataType::REALTIME",
+		"engine": "Engine::PHPFINA",
+		"interval": "10"
+	},
+	{
+		"name": "outHumidity",
+		"type": "DataType::REALTIME",
+		"engine": "Engine::PHPFINA",
+		"interval": "10"
+	},
+	{
+		"name": "windSpeed",
+		"type": "DataType::REALTIME",
+		"engine": "Engine::PHPFINA",
+		"interval": "10"
+	},
+	{
+		"name": "windDir",
+		"type": "DataType::REALTIME",
+		"engine": "Engine::PHPFINA",
+		"interval": "10"
+	},
+	{
+		"name": "windGust",
+		"type": "DataType::REALTIME",
+		"engine": "Engine::PHPFINA",
+		"interval": "10"
+	},
+	{
+		"name": "windGustDir",
+		"type": "DataType::REALTIME",
+		"engine": "Engine::PHPFINA",
+		"interval": "10"
+	},
+	{
+		"name": "rainRate",
+		"type": "DataType::REALTIME",
+		"engine": "Engine::PHPFINA",
+		"interval": "10"
+	},
+	{
+		"name": "rain",
+		"type": "DataType::REALTIME",
+		"engine": "Engine::PHPFINA",
+		"interval": "10"
+	},
+	{
+		"name": "dewpoint",
+		"type": "DataType::REALTIME",
+		"engine": "Engine::PHPFINA",
+		"interval": "10"
+	},
+	{
+		"name": "windchill",
+		"type": "DataType::REALTIME",
+		"engine": "Engine::PHPFINA",
+		"interval": "10"
+	},
+	{
+		"name": "heatindex",
+		"type": "DataType::REALTIME",
+		"engine": "Engine::PHPFINA",
+		"interval": "10"
+	}
+        ]
+}

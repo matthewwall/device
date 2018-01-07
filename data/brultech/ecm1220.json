@@ -1,0 +1,44 @@
+{
+	"name": "ECM1220",
+	"category": "BrulTech",
+	"group": "Energy Monitor",
+	"description": "INPUTS & FEEDS for ECM1220 from brultech.com",
+	"inputs": [
+	{
+		"name": "ch1_w",
+		"description": "Channel 1 Power",
+		"processList": [{
+			"process": "log_to_feed",
+			"arguments": {
+				"type": "ProcessArg::FEEDID",
+				"value": "ch1_w"
+			}
+		}]
+	},
+	{
+		"name": "ch2_w",
+		"description": "Channel 2 Power",
+		"processList": [{
+			"process": "log_to_feed",
+			"arguments": {
+				"type": "ProcessArg::FEEDID",
+				"value": "ch2_w"
+			}
+		}]
+	}
+        ],
+	"feeds": [
+	{
+		"name": "ch1_w",
+		"type": "DataType::REALTIME",
+		"engine": "Engine::PHPFINA",
+		"interval": "10"
+	},
+	{
+		"name": "ch2_w",
+		"type": "DataType::REALTIME",
+		"engine": "Engine::PHPFINA",
+		"interval": "10"
+	}
+        ]
+}
