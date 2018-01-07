@@ -1,0 +1,772 @@
+{
+	"name": "GEM",
+	"category": "BrulTech",
+	"group": "Energy Monitor",
+	"description": "INPUTS & FEEDS for GEM from brultech.com",
+	"inputs": [
+        {
+		"name": "voltage",
+		"description": "Voltage",
+		"processList": [{
+			"process": "log_to_feed",
+			"arguments": {
+				"type": "ProcessArg::FEEDID",
+				"value": "voltage"
+			}
+		}]
+	},
+        {
+		"name": "t1",
+		"description": "Temperature 1",
+		"processList": [{
+			"process": "log_to_feed",
+			"arguments": {
+				"type": "ProcessArg::FEEDID",
+				"value": "t1"
+			}
+		}]
+	},
+        {
+		"name": "t2",
+		"description": "Temperature 2",
+		"processList": [{
+			"process": "log_to_feed",
+			"arguments": {
+				"type": "ProcessArg::FEEDID",
+				"value": "t2"
+			}
+		}]
+	},
+        {
+		"name": "t3",
+		"description": "Temperature 3",
+		"processList": [{
+			"process": "log_to_feed",
+			"arguments": {
+				"type": "ProcessArg::FEEDID",
+				"value": "t3"
+			}
+		}]
+	},
+        {
+		"name": "t4",
+		"description": "Temperature 4",
+		"processList": [{
+			"process": "log_to_feed",
+			"arguments": {
+				"type": "ProcessArg::FEEDID",
+				"value": "t4"
+			}
+		}]
+	},
+        {
+		"name": "t5",
+		"description": "Temperature 5",
+		"processList": [{
+			"process": "log_to_feed",
+			"arguments": {
+				"type": "ProcessArg::FEEDID",
+				"value": "t5"
+			}
+		}]
+	},
+        {
+		"name": "t6",
+		"description": "Temperature 6",
+		"processList": [{
+			"process": "log_to_feed",
+			"arguments": {
+				"type": "ProcessArg::FEEDID",
+				"value": "t6"
+			}
+		}]
+	},
+        {
+		"name": "t7",
+		"description": "Temperature 7",
+		"processList": [{
+			"process": "log_to_feed",
+			"arguments": {
+				"type": "ProcessArg::FEEDID",
+				"value": "t7"
+			}
+		}]
+	},
+        {
+		"name": "t8",
+		"description": "Temperature 8",
+		"processList": [{
+			"process": "log_to_feed",
+			"arguments": {
+				"type": "ProcessArg::FEEDID",
+				"value": "t8"
+			}
+		}]
+	},
+	{
+		"name": "p1",
+		"description": "Pulse 1",
+		"processList": [{
+			"process": "log_to_feed",
+			"arguments": {
+				"type": "ProcessArg::FEEDID",
+				"value": "p1"
+			}
+		}]
+	},
+	{
+		"name": "p2",
+		"description": "Pulse 2",
+		"processList": [{
+			"process": "log_to_feed",
+			"arguments": {
+				"type": "ProcessArg::FEEDID",
+				"value": "p2"
+			}
+		}]
+	},
+	{
+		"name": "p3",
+		"description": "Pulse 3",
+		"processList": [{
+			"process": "log_to_feed",
+			"arguments": {
+				"type": "ProcessArg::FEEDID",
+				"value": "p3"
+			}
+		}]
+	},
+	{
+		"name": "p4",
+		"description": "Pulse 4",
+		"processList": [{
+			"process": "log_to_feed",
+			"arguments": {
+				"type": "ProcessArg::FEEDID",
+				"value": "p4"
+			}
+		}]
+	},
+	{
+		"name": "ch1_w",
+		"description": "Channel 1 Power",
+		"processList": [{
+			"process": "log_to_feed",
+			"arguments": {
+				"type": "ProcessArg::FEEDID",
+				"value": "ch1_w"
+			}
+		}]
+	},
+	{
+		"name": "ch2_w",
+		"description": "Channel 2 Power",
+		"processList": [{
+			"process": "log_to_feed",
+			"arguments": {
+				"type": "ProcessArg::FEEDID",
+				"value": "ch2_w"
+			}
+		}]
+	},
+	{
+		"name": "ch3_w",
+		"description": "Channel 3 Power",
+		"processList": [{
+			"process": "log_to_feed",
+			"arguments": {
+				"type": "ProcessArg::FEEDID",
+				"value": "ch3_w"
+			}
+		}]
+	},
+	{
+		"name": "ch4_w",
+		"description": "Channel 4 Power",
+		"processList": [{
+			"process": "log_to_feed",
+			"arguments": {
+				"type": "ProcessArg::FEEDID",
+				"value": "ch4_w"
+			}
+		}]
+	},
+	{
+		"name": "ch5_w",
+		"description": "Channel 5 Power",
+		"processList": [{
+			"process": "log_to_feed",
+			"arguments": {
+				"type": "ProcessArg::FEEDID",
+				"value": "ch5_w"
+			}
+		}]
+	},
+	{
+		"name": "ch6_w",
+		"description": "Channel 6 Power",
+		"processList": [{
+			"process": "log_to_feed",
+			"arguments": {
+				"type": "ProcessArg::FEEDID",
+				"value": "ch6_w"
+			}
+		}]
+	},
+	{
+		"name": "ch7_w",
+		"description": "Channel 7 Power",
+		"processList": [{
+			"process": "log_to_feed",
+			"arguments": {
+				"type": "ProcessArg::FEEDID",
+				"value": "ch7_w"
+			}
+		}]
+	},
+	{
+		"name": "ch8_w",
+		"description": "Channel 8 Power",
+		"processList": [{
+			"process": "log_to_feed",
+			"arguments": {
+				"type": "ProcessArg::FEEDID",
+				"value": "ch8_w"
+			}
+		}]
+	},
+	{
+		"name": "ch9_w",
+		"description": "Channel 9 Power",
+		"processList": [{
+			"process": "log_to_feed",
+			"arguments": {
+				"type": "ProcessArg::FEEDID",
+				"value": "ch9_w"
+			}
+		}]
+	},
+	{
+		"name": "ch10_w",
+		"description": "Channel 10 Power",
+		"processList": [{
+			"process": "log_to_feed",
+			"arguments": {
+				"type": "ProcessArg::FEEDID",
+				"value": "ch10_w"
+			}
+		}]
+	},
+	{
+		"name": "ch11_w",
+		"description": "Channel 11 Power",
+		"processList": [{
+			"process": "log_to_feed",
+			"arguments": {
+				"type": "ProcessArg::FEEDID",
+				"value": "ch11_w"
+			}
+		}]
+	},
+	{
+		"name": "ch12_w",
+		"description": "Channel 12 Power",
+		"processList": [{
+			"process": "log_to_feed",
+			"arguments": {
+				"type": "ProcessArg::FEEDID",
+				"value": "ch12_w"
+			}
+		}]
+	},
+	{
+		"name": "ch13_w",
+		"description": "Channel 13 Power",
+		"processList": [{
+			"process": "log_to_feed",
+			"arguments": {
+				"type": "ProcessArg::FEEDID",
+				"value": "ch13_w"
+			}
+		}]
+	},
+	{
+		"name": "ch14_w",
+		"description": "Channel 14 Power",
+		"processList": [{
+			"process": "log_to_feed",
+			"arguments": {
+				"type": "ProcessArg::FEEDID",
+				"value": "ch14_w"
+			}
+		}]
+	},
+	{
+		"name": "ch15_w",
+		"description": "Channel 15 Power",
+		"processList": [{
+			"process": "log_to_feed",
+			"arguments": {
+				"type": "ProcessArg::FEEDID",
+				"value": "ch15_w"
+			}
+		}]
+	},
+	{
+		"name": "ch16_w",
+		"description": "Channel 16 Power",
+		"processList": [{
+			"process": "log_to_feed",
+			"arguments": {
+				"type": "ProcessArg::FEEDID",
+				"value": "ch16_w"
+			}
+		}]
+	},
+	{
+		"name": "ch17_w",
+		"description": "Channel 17 Power",
+		"processList": [{
+			"process": "log_to_feed",
+			"arguments": {
+				"type": "ProcessArg::FEEDID",
+				"value": "ch17_w"
+			}
+		}]
+	},
+	{
+		"name": "ch18_w",
+		"description": "Channel 18 Power",
+		"processList": [{
+			"process": "log_to_feed",
+			"arguments": {
+				"type": "ProcessArg::FEEDID",
+				"value": "ch18_w"
+			}
+		}]
+	},
+	{
+		"name": "ch19_w",
+		"description": "Channel 19 Power",
+		"processList": [{
+			"process": "log_to_feed",
+			"arguments": {
+				"type": "ProcessArg::FEEDID",
+				"value": "ch19_w"
+			}
+		}]
+	},
+	{
+		"name": "ch20_w",
+		"description": "Channel 20 Power",
+		"processList": [{
+			"process": "log_to_feed",
+			"arguments": {
+				"type": "ProcessArg::FEEDID",
+				"value": "ch20_w"
+			}
+		}]
+	},
+	{
+		"name": "ch21_w",
+		"description": "Channel 21 Power",
+		"processList": [{
+			"process": "log_to_feed",
+			"arguments": {
+				"type": "ProcessArg::FEEDID",
+				"value": "ch21_w"
+			}
+		}]
+	},
+	{
+		"name": "ch22_w",
+		"description": "Channel 22 Power",
+		"processList": [{
+			"process": "log_to_feed",
+			"arguments": {
+				"type": "ProcessArg::FEEDID",
+				"value": "ch22_w"
+			}
+		}]
+	},
+	{
+		"name": "ch23_w",
+		"description": "Channel 23 Power",
+		"processList": [{
+			"process": "log_to_feed",
+			"arguments": {
+				"type": "ProcessArg::FEEDID",
+				"value": "ch23_w"
+			}
+		}]
+	},
+	{
+		"name": "ch24_w",
+		"description": "Channel 24 Power",
+		"processList": [{
+			"process": "log_to_feed",
+			"arguments": {
+				"type": "ProcessArg::FEEDID",
+				"value": "ch24_w"
+			}
+		}]
+	},
+	{
+		"name": "ch25_w",
+		"description": "Channel 25 Power",
+		"processList": [{
+			"process": "log_to_feed",
+			"arguments": {
+				"type": "ProcessArg::FEEDID",
+				"value": "ch25_w"
+			}
+		}]
+	},
+	{
+		"name": "ch26_w",
+		"description": "Channel 26 Power",
+		"processList": [{
+			"process": "log_to_feed",
+			"arguments": {
+				"type": "ProcessArg::FEEDID",
+				"value": "ch26_w"
+			}
+		}]
+	},
+	{
+		"name": "ch27_w",
+		"description": "Channel 27 Power",
+		"processList": [{
+			"process": "log_to_feed",
+			"arguments": {
+				"type": "ProcessArg::FEEDID",
+				"value": "ch27_w"
+			}
+		}]
+	},
+	{
+		"name": "ch28_w",
+		"description": "Channel 28 Power",
+		"processList": [{
+			"process": "log_to_feed",
+			"arguments": {
+				"type": "ProcessArg::FEEDID",
+				"value": "ch28_w"
+			}
+		}]
+	},
+	{
+		"name": "ch29_w",
+		"description": "Channel 29 Power",
+		"processList": [{
+			"process": "log_to_feed",
+			"arguments": {
+				"type": "ProcessArg::FEEDID",
+				"value": "ch29_w"
+			}
+		}]
+	},
+	{
+		"name": "ch30_w",
+		"description": "Channel 30 Power",
+		"processList": [{
+			"process": "log_to_feed",
+			"arguments": {
+				"type": "ProcessArg::FEEDID",
+				"value": "ch30_w"
+			}
+		}]
+	},
+	{
+		"name": "ch31_w",
+		"description": "Channel 31 Power",
+		"processList": [{
+			"process": "log_to_feed",
+			"arguments": {
+				"type": "ProcessArg::FEEDID",
+				"value": "ch31_w"
+			}
+		}]
+	},
+	{
+		"name": "ch32_w",
+		"description": "Channel 32 Power",
+		"processList": [{
+			"process": "log_to_feed",
+			"arguments": {
+				"type": "ProcessArg::FEEDID",
+				"value": "ch32_w"
+			}
+		}]
+	}],
+	"feeds": [{
+		"name": "voltage",
+		"type": "DataType::REALTIME",
+		"engine": "Engine::PHPFINA",
+		"interval": "10"
+	},
+	{
+		"name": "t1",
+		"type": "DataType::REALTIME",
+		"engine": "Engine::PHPFINA",
+		"interval": "10"
+	},
+	{
+		"name": "t2",
+		"type": "DataType::REALTIME",
+		"engine": "Engine::PHPFINA",
+		"interval": "10"
+	},
+	{
+		"name": "t3",
+		"type": "DataType::REALTIME",
+		"engine": "Engine::PHPFINA",
+		"interval": "10"
+	},
+	{
+		"name": "t4",
+		"type": "DataType::REALTIME",
+		"engine": "Engine::PHPFINA",
+		"interval": "10"
+	},
+	{
+		"name": "t5",
+		"type": "DataType::REALTIME",
+		"engine": "Engine::PHPFINA",
+		"interval": "10"
+	},
+	{
+		"name": "t6",
+		"type": "DataType::REALTIME",
+		"engine": "Engine::PHPFINA",
+		"interval": "10"
+	},
+	{
+		"name": "t7",
+		"type": "DataType::REALTIME",
+		"engine": "Engine::PHPFINA",
+		"interval": "10"
+	},
+	{
+		"name": "t8",
+		"type": "DataType::REALTIME",
+		"engine": "Engine::PHPFINA",
+		"interval": "10"
+	},
+	{
+		"name": "p1",
+		"type": "DataType::REALTIME",
+		"engine": "Engine::PHPFINA",
+		"interval": "10"
+	},
+	{
+		"name": "p2",
+		"type": "DataType::REALTIME",
+		"engine": "Engine::PHPFINA",
+		"interval": "10"
+	},
+	{
+		"name": "p3",
+		"type": "DataType::REALTIME",
+		"engine": "Engine::PHPFINA",
+		"interval": "10"
+	},
+	{
+		"name": "p4",
+		"type": "DataType::REALTIME",
+		"engine": "Engine::PHPFINA",
+		"interval": "10"
+	},
+	{
+		"name": "ch1_w",
+		"type": "DataType::REALTIME",
+		"engine": "Engine::PHPFINA",
+		"interval": "10"
+	},
+	{
+		"name": "ch2_w",
+		"type": "DataType::REALTIME",
+		"engine": "Engine::PHPFINA",
+		"interval": "10"
+	},
+	{
+		"name": "ch3_w",
+		"type": "DataType::REALTIME",
+		"engine": "Engine::PHPFINA",
+		"interval": "10"
+	},
+	{
+		"name": "ch4_w",
+		"type": "DataType::REALTIME",
+		"engine": "Engine::PHPFINA",
+		"interval": "10"
+	},
+	{
+		"name": "ch5_w",
+		"type": "DataType::REALTIME",
+		"engine": "Engine::PHPFINA",
+		"interval": "10"
+	},
+	{
+		"name": "ch6_w",
+		"type": "DataType::REALTIME",
+		"engine": "Engine::PHPFINA",
+		"interval": "10"
+	},
+	{
+		"name": "ch7_w",
+		"type": "DataType::REALTIME",
+		"engine": "Engine::PHPFINA",
+		"interval": "10"
+	},
+	{
+		"name": "ch8_w",
+		"type": "DataType::REALTIME",
+		"engine": "Engine::PHPFINA",
+		"interval": "10"
+	},
+	{
+		"name": "ch9_w",
+		"type": "DataType::REALTIME",
+		"engine": "Engine::PHPFINA",
+		"interval": "10"
+	},
+	{
+		"name": "ch10_w",
+		"type": "DataType::REALTIME",
+		"engine": "Engine::PHPFINA",
+		"interval": "10"
+	},
+	{
+		"name": "ch11_w",
+		"type": "DataType::REALTIME",
+		"engine": "Engine::PHPFINA",
+		"interval": "10"
+	},
+	{
+		"name": "ch12_w",
+		"type": "DataType::REALTIME",
+		"engine": "Engine::PHPFINA",
+		"interval": "10"
+	},
+	{
+		"name": "ch13_w",
+		"type": "DataType::REALTIME",
+		"engine": "Engine::PHPFINA",
+		"interval": "10"
+	},
+	{
+		"name": "ch14_w",
+		"type": "DataType::REALTIME",
+		"engine": "Engine::PHPFINA",
+		"interval": "10"
+	},
+	{
+		"name": "ch15_w",
+		"type": "DataType::REALTIME",
+		"engine": "Engine::PHPFINA",
+		"interval": "10"
+	},
+	{
+		"name": "ch16_w",
+		"type": "DataType::REALTIME",
+		"engine": "Engine::PHPFINA",
+		"interval": "10"
+	},
+	{
+		"name": "ch17_w",
+		"type": "DataType::REALTIME",
+		"engine": "Engine::PHPFINA",
+		"interval": "10"
+	},
+	{
+		"name": "ch18_w",
+		"type": "DataType::REALTIME",
+		"engine": "Engine::PHPFINA",
+		"interval": "10"
+	},
+	{
+		"name": "ch19_w",
+		"type": "DataType::REALTIME",
+		"engine": "Engine::PHPFINA",
+		"interval": "10"
+	},
+	{
+		"name": "ch20_w",
+		"type": "DataType::REALTIME",
+		"engine": "Engine::PHPFINA",
+		"interval": "10"
+	},
+	{
+		"name": "ch21_w",
+		"type": "DataType::REALTIME",
+		"engine": "Engine::PHPFINA",
+		"interval": "10"
+	},
+	{
+		"name": "ch22_w",
+		"type": "DataType::REALTIME",
+		"engine": "Engine::PHPFINA",
+		"interval": "10"
+	},
+	{
+		"name": "ch23_w",
+		"type": "DataType::REALTIME",
+		"engine": "Engine::PHPFINA",
+		"interval": "10"
+	},
+	{
+		"name": "ch24_w",
+		"type": "DataType::REALTIME",
+		"engine": "Engine::PHPFINA",
+		"interval": "10"
+	},
+	{
+		"name": "ch25_w",
+		"type": "DataType::REALTIME",
+		"engine": "Engine::PHPFINA",
+		"interval": "10"
+	},
+	{
+		"name": "ch26_w",
+		"type": "DataType::REALTIME",
+		"engine": "Engine::PHPFINA",
+		"interval": "10"
+	},
+	{
+		"name": "ch27_w",
+		"type": "DataType::REALTIME",
+		"engine": "Engine::PHPFINA",
+		"interval": "10"
+	},
+	{
+		"name": "ch28_w",
+		"type": "DataType::REALTIME",
+		"engine": "Engine::PHPFINA",
+		"interval": "10"
+	},
+	{
+		"name": "ch29_w",
+		"type": "DataType::REALTIME",
+		"engine": "Engine::PHPFINA",
+		"interval": "10"
+	},
+	{
+		"name": "ch30_w",
+		"type": "DataType::REALTIME",
+		"engine": "Engine::PHPFINA",
+		"interval": "10"
+	},
+	{
+		"name": "ch31_w",
+		"type": "DataType::REALTIME",
+		"engine": "Engine::PHPFINA",
+		"interval": "10"
+	},
+	{
+		"name": "ch32_w",
+		"type": "DataType::REALTIME",
+		"engine": "Engine::PHPFINA",
+		"interval": "10"
+	}]
+}

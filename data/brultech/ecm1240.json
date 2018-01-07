@@ -1,0 +1,177 @@
+{
+	"name": "ECM1240",
+	"category": "BrulTech",
+	"group": "Energy Monitor",
+	"description": "INPUTS & FEEDS for ECM1240 from brultech.com",
+	"inputs": [
+        {
+		"name": "voltage",
+		"description": "Voltage",
+		"processList": [{
+			"process": "log_to_feed",
+			"arguments": {
+				"type": "ProcessArg::FEEDID",
+				"value": "voltage"
+			}
+		}]
+	},
+	{
+		"name": "p1",
+		"description": "Pulse 1",
+		"processList": [{
+			"process": "log_to_feed",
+			"arguments": {
+				"type": "ProcessArg::FEEDID",
+				"value": "p1"
+			}
+		}]
+	},
+	{
+		"name": "p2",
+		"description": "Pulse 2",
+		"processList": [{
+			"process": "log_to_feed",
+			"arguments": {
+				"type": "ProcessArg::FEEDID",
+				"value": "p2"
+			}
+		}]
+	},
+	{
+		"name": "ch1_w",
+		"description": "Channel 1 Power",
+		"processList": [{
+			"process": "log_to_feed",
+			"arguments": {
+				"type": "ProcessArg::FEEDID",
+				"value": "ch1_w"
+			}
+		}]
+	},
+	{
+		"name": "ch2_w",
+		"description": "Channel 2 Power",
+		"processList": [{
+			"process": "log_to_feed",
+			"arguments": {
+				"type": "ProcessArg::FEEDID",
+				"value": "ch2_w"
+			}
+		}]
+	},
+	{
+		"name": "ch3_w",
+		"description": "Channel 3 Power",
+		"processList": [{
+			"process": "log_to_feed",
+			"arguments": {
+				"type": "ProcessArg::FEEDID",
+				"value": "ch3_w"
+			}
+		}]
+	},
+	{
+		"name": "ch4_w",
+		"description": "Channel 4 Power",
+		"processList": [{
+			"process": "log_to_feed",
+			"arguments": {
+				"type": "ProcessArg::FEEDID",
+				"value": "ch4_w"
+			}
+		}]
+	},
+	{
+		"name": "ch5_w",
+		"description": "Channel 5 Power",
+		"processList": [{
+			"process": "log_to_feed",
+			"arguments": {
+				"type": "ProcessArg::FEEDID",
+				"value": "ch5_w"
+			}
+		}]
+	},
+	{
+		"name": "ch6_w",
+		"description": "Channel 6 Power",
+		"processList": [{
+			"process": "log_to_feed",
+			"arguments": {
+				"type": "ProcessArg::FEEDID",
+				"value": "ch6_w"
+			}
+		}]
+	},
+	{
+		"name": "ch7_w",
+		"description": "Channel 7 Power",
+		"processList": [{
+			"process": "log_to_feed",
+			"arguments": {
+				"type": "ProcessArg::FEEDID",
+				"value": "ch7_w"
+			}
+		}]
+	}],
+	"feeds": [{
+		"name": "voltage",
+		"type": "DataType::REALTIME",
+		"engine": "Engine::PHPFINA",
+		"interval": "10"
+	},
+	{
+		"name": "p1",
+		"type": "DataType::REALTIME",
+		"engine": "Engine::PHPFINA",
+		"interval": "10"
+	},
+	{
+		"name": "p2",
+		"type": "DataType::REALTIME",
+		"engine": "Engine::PHPFINA",
+		"interval": "10"
+	},
+	{
+		"name": "ch1_w",
+		"type": "DataType::REALTIME",
+		"engine": "Engine::PHPFINA",
+		"interval": "10"
+	},
+	{
+		"name": "ch2_w",
+		"type": "DataType::REALTIME",
+		"engine": "Engine::PHPFINA",
+		"interval": "10"
+	},
+	{
+		"name": "ch3_w",
+		"type": "DataType::REALTIME",
+		"engine": "Engine::PHPFINA",
+		"interval": "10"
+	},
+	{
+		"name": "ch4_w",
+		"type": "DataType::REALTIME",
+		"engine": "Engine::PHPFINA",
+		"interval": "10"
+	},
+	{
+		"name": "ch5_w",
+		"type": "DataType::REALTIME",
+		"engine": "Engine::PHPFINA",
+		"interval": "10"
+	},
+	{
+		"name": "ch6_w",
+		"type": "DataType::REALTIME",
+		"engine": "Engine::PHPFINA",
+		"interval": "10"
+	},
+	{
+		"name": "ch7_w",
+		"type": "DataType::REALTIME",
+		"engine": "Engine::PHPFINA",
+		"interval": "10"
+	}]
+}
