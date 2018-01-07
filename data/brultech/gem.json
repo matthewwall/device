@@ -5,13 +5,13 @@
 	"description": "INPUTS & FEEDS for GEM from brultech.com",
 	"inputs": [
         {
-		"name": "voltage",
+		"name": "volts",
 		"description": "Voltage",
 		"processList": [{
 			"process": "log_to_feed",
 			"arguments": {
 				"type": "ProcessArg::FEEDID",
-				"value": "voltage"
+				"value": "volts"
 			}
 		}]
 	},
@@ -500,7 +500,7 @@
 		}]
 	}],
 	"feeds": [{
-		"name": "voltage",
+		"name": "volts",
 		"type": "DataType::REALTIME",
 		"engine": "Engine::PHPFINA",
 		"interval": "10"
